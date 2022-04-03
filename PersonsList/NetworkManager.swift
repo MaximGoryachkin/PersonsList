@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
@@ -26,7 +27,15 @@ class NetworkManager {
                 }
             } catch {
                 print(error.localizedDescription)
+                print("123")
             }
         }.resume()
+    }
+    
+    func fetchImageData(from url: String?) -> Data? {
+        guard let stringURL = url else { return nil }
+        guard let url = URL(string: stringURL) else { return nil }
+        guard let data = try? Data(contentsOf: url) else { return nil }
+        return data
     }
 }

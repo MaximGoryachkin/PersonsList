@@ -21,9 +21,9 @@ class NavigationController: UINavigationController {
         navigationBarAppearance.backgroundColor = .systemGray
         
         
-//        navigationBar.scrollEdgeAppearance = navigationBarAppearance
-//        navigationBar.standardAppearance = navigationBarAppearance
-//        navigationBar.compactAppearance = navigationBarAppearance
-        navigationBar.compactScrollEdgeAppearance = navigationBarAppearance
+        navigationBar.scrollEdgeAppearance = navigationBarAppearance  // внешний вид контроллера в обычном состоянии без прокрутки (таблица не заходит за контроллер)
+//        navigationBar.standardAppearance = navigationBarAppearance // внешний вид контроллера в состоянии прокрутки (таблица заходит за контроллер)
+//        navigationBar.compactScrollEdgeAppearance = navigationBarAppearance // внешний вид контроллера в обычном состоянии без прокрутки (таблица не заходит за контроллер) только в альбомной ориентации
+//        navigationBar.compactAppearance = navigationBarAppearance // внешний вид контроллера в состоянии прокрутки (таблица заходит за контроллер) только в альбомной ориентации
     }
 }
